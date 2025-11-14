@@ -4,6 +4,14 @@ kind: API
 metadata:
   name: api-do-compilador
   description: API para submeter e gerenciar jobs de compilação
+  annotations:
+    # ✅ OBRIGATÓRIA: O nome ou ID do 'Service' DENTRO DO KONG
+    kong-manager/service-name: 'sisof'
+    # ✅ OBRIGATÓRIA: O 'id' que você definiu no app-config.yaml
+    # Pode listar várias instâncias, separadas por vírgula (sem espaço)
+    kong-manager/instance: 'kong-instance01'
+    # OPCIONAL: Caminho para o seu arquivo OpenAPI
+    kong-manager/spec: openapi-swagger.yaml
 spec:
   type: openapi
   lifecycle: production
