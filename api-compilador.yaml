@@ -1,0 +1,22 @@
+# api-compilador.yaml
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: api-do-compilador
+  description: API para submeter e gerenciar jobs de compilação
+spec:
+  type: openapi
+  lifecycle: production
+  owner: 'user:default/caiotaavares' # ⬅️ Use o seu usuário que criamos
+  
+  # A definição do contrato. Pode ser um arquivo no seu repo.
+  # Por enquanto, podemos usar um texto dummy:
+  definition: |
+    openapi: "3.0.0"
+    info:
+      title: API do Compilador
+      version: 1.0.0
+    paths:
+      /compile:
+        post:
+          summary: Submete um novo job de compilação
