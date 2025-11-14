@@ -1,0 +1,18 @@
+# app-compilador-frontend.yaml
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: compilador-frontend
+  description: A interface web para submeter compilações
+  annotations:
+    # Aponte para o repo real do seu frontend
+    github.com/project-slug: caiotaavares/compilador-frontend-repo
+spec:
+  type: website
+  lifecycle: production
+  owner: 'user:default/caiotaavares'
+  
+  # ✅ A OUTRA LINHA MÁGICA:
+  # "Este componente CONSOME a API 'api-do-compilador'"
+  consumesApis:
+    - 'api:default/api-do-compilador'
