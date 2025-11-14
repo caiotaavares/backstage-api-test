@@ -7,7 +7,7 @@ spec:
   # Aponta para todos os arquivos YAML dentro dessa pasta no repo
   type: url
   targets:
-    - https://github.com/caiotaavares/meu-catalogo/blob/main/api-compilador.yaml
-    - https://github.com/caiotaavares/meu-catalogo/blob/main/service-compilador-backend.yaml
-    - https://github.com/caiotaavares/meu-catalogo/blob/main/app-compilador-frontend.yaml
-    - https://github.com/caiotaavares/meu-catalogo/blob/main/service-relatorios-backend.yaml
+    - https://github.com/caiotaavares/backstage-api-test/blob/main/api-compilador.yaml
+    - https://github.com/caiotaavares/backstage-api-test/blob/main/service-compilador-backend.yaml
+    - https://github.com/caiotaavares/backstage-api-test/blob/main/app-compilador-frontend.yaml
+    - https://github.com/caiotaavares/backstage-api-test/blob/main/service-relatorios-backend.yaml
