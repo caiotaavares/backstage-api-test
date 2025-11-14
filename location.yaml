@@ -1,0 +1,13 @@
+# location.yaml
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: meu-catalogo-de-apis-e-servicos
+spec:
+  # Aponta para todos os arquivos YAML dentro dessa pasta no repo
+  type: url
+  targets:
+    - https://github.com/caiotaavares/meu-catalogo/blob/main/api-compilador.yaml
+    - https://github.com/caiotaavares/meu-catalogo/blob/main/service-compilador-backend.yaml
+    - https://github.com/caiotaavares/meu-catalogo/blob/main/app-compilador-frontend.yaml
+    - https://github.com/caiotaavares/meu-catalogo/blob/main/service-relatorios-backend.yaml
