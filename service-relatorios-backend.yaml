@@ -1,0 +1,18 @@
+# service-relatorios-backend.yaml
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: servico-de-relatorios
+  description: Backend que consome a API do Compilador para gerar relatórios.
+  annotations:
+    # Aponte para o repo real deste novo serviço
+    github.com/project-slug: caiotaavares/servico-relatorios-repo
+spec:
+  type: service  # ⬅️ Note que o tipo é 'service'
+  lifecycle: production
+  owner: 'user:default/caiotaavares'
+  
+  # ✅ AQUI ESTÁ A MÁGICA:
+  # Este backend "CONSOME" a mesma API que o frontend.
+  consumesApis:
+    - 'api:default/api-do-compilador'
