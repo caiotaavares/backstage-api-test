@@ -1,0 +1,19 @@
+# service-compilador-backend.yaml
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: compilador-backend
+  description: O serviço de backend que executa o compilador
+  annotations:
+    # Aponte para o repo real do seu backend
+    github.com/project-slug: caiotaavares/compilador-backend-repo
+spec:
+  type: service
+  lifecycle: production
+  owner: 'user:default/caiotaavares'
+  
+  # ✅ A LINHA MÁGICA:
+  # "Este componente PROVÊ a API 'api-do-compilador'"
+  # O formato é 'kind:namespace/name'
+  providesApis:
+    - 'api:default/api-do-compilador'
